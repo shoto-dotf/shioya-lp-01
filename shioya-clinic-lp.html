@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>SHIOYA LUXURY HEALTH | Premium Digestive Internal Medicine Clinic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1960,6 +1963,7 @@
                 stat_4_label: "Countries & Regions Served",
                 // その他のセクション
                 empathy_title: "Investing in health is the ultimate asset building",
+                empathy_desc: "Global executives know this truth.<br>True wealth is not just economic success,<br>but built on the foundation of health.",
                 empathy_card_1_title: "For those who value time",
                 empathy_card_1_desc: "Complete in half a day with no waiting. Executive-exclusive precision medicine.",
                 empathy_card_2_title: "For those seeking authentic experiences",
@@ -2033,6 +2037,7 @@
                 stat_4_label: "国と地域からの来院",
                 // その他のセクション
                 empathy_title: "健康への投資が、最高の資産形成",
+                empathy_desc: "世界のエグゼクティブは知っています。<br>真の豊かさとは、単なる経済的成功ではなく、<br>健康という土台の上に築かれるものだということを。",
                 empathy_card_1_title: "時間の価値を知るあなたへ",
                 empathy_card_1_desc: "待ち時間なし、半日で完了。エグゼクティブ専用の精密医療。",
                 empathy_card_2_title: "本物の体験を求めるあなたへ",
@@ -2106,6 +2111,7 @@
                 stat_4_label: "ประเทศและภูมิภาคที่ให้บริการ",
                 // その他のセクション
                 empathy_title: "การลงทุนด้านสุขภาพคือการสร้างสินทรัพย์ที่ดีที่สุด",
+                empathy_desc: "ผู้บริหารระดับโลกรู้ความจริงนี้<br>ความมั่งคั่งที่แท้จริงไม่ใช่แค่ความสำเร็จทางเศรษฐกิจ<br>แต่สร้างขึ้นบนรากฐานของสุขภาพ",
                 empathy_card_1_title: "สำหรับท่านที่รู้คุณค่าของเวลา",
                 empathy_card_1_desc: "เสร็จสมบูรณ์ในครึ่งวัน ไม่ต้องรอคิว การแพทย์แม่นยำเฉพาะสำหรับผู้บริหาร",
                 empathy_card_2_title: "สำหรับท่านที่แสวงหาประสบการณ์แท้จริง",
@@ -2179,6 +2185,7 @@
                 stat_4_label: "Quốc Gia Và Vùng Miền Phục Vụ",
                 // その他のセクション
                 empathy_title: "Đầu tư vào sức khỏe là việc xây dựng tài sản tốt nhất",
+                empathy_desc: "Các giám đốc điều hành toàn cầu biết sự thật này.<br>Sự giàu có thực sự không chỉ là thành công kinh tế,<br>mà được xây dựng trên nền tảng sức khỏe.",
                 empathy_card_1_title: "Dành cho những người hiểu giá trị thời gian",
                 empathy_card_1_desc: "Hoàn thành trong nửa ngày, không cần chờ đợi. Y học chính xác dành riêng cho giám đốc điều hành.",
                 empathy_card_2_title: "Dành cho những người tìm kiếm trải nghiệm chân thực",
@@ -2280,6 +2287,9 @@
             const empathyTitle = document.querySelector('.empathy h2');
             if (empathyTitle) empathyTitle.textContent = t.empathy_title;
             
+            const empathyDesc = document.querySelector('.empathy-content > p');
+            if (empathyDesc) empathyDesc.innerHTML = t.empathy_desc;
+            
             const empathyCards = document.querySelectorAll('.empathy-card');
             if (empathyCards[0]) {
                 empathyCards[0].querySelector('h3').textContent = t.empathy_card_1_title;
@@ -2301,15 +2311,18 @@
             const valueItems = document.querySelectorAll('.value-item');
             if (valueItems[0]) {
                 valueItems[0].querySelector('h3').textContent = t.value_1_title;
-                valueItems[0].querySelector('p').textContent = t.value_1_desc;
+                const valueP = valueItems[0].querySelectorAll('p');
+                if (valueP[1]) valueP[1].textContent = t.value_1_desc;
             }
             if (valueItems[1]) {
                 valueItems[1].querySelector('h3').textContent = t.value_2_title;
-                valueItems[1].querySelector('p').textContent = t.value_2_desc;
+                const valueP = valueItems[1].querySelectorAll('p');
+                if (valueP[1]) valueP[1].textContent = t.value_2_desc;
             }
             if (valueItems[2]) {
                 valueItems[2].querySelector('h3').textContent = t.value_3_title;
-                valueItems[2].querySelector('p').textContent = t.value_3_desc;
+                const valueP = valueItems[2].querySelectorAll('p');
+                if (valueP[1]) valueP[1].textContent = t.value_3_desc;
             }
 
             // パッケージセクション
@@ -2319,18 +2332,18 @@
             const packageCards = document.querySelectorAll('.package-card');
             if (packageCards[0]) {
                 packageCards[0].querySelector('h3').textContent = t.package_1_title;
-                packageCards[0].querySelector('p').textContent = t.package_1_desc;
                 packageCards[0].querySelector('.package-price').textContent = t.package_1_price;
+                packageCards[0].querySelector('small').textContent = t.package_1_duration || "Duration: 3-4 hours";
             }
             if (packageCards[1]) {
                 packageCards[1].querySelector('h3').textContent = t.package_2_title;
-                packageCards[1].querySelector('p').textContent = t.package_2_desc;
                 packageCards[1].querySelector('.package-price').textContent = t.package_2_price;
+                packageCards[1].querySelector('small').textContent = t.package_2_duration || "Duration: 5-6 hours";
             }
             if (packageCards[2]) {
                 packageCards[2].querySelector('h3').textContent = t.package_3_title;
-                packageCards[2].querySelector('p').textContent = t.package_3_desc;
                 packageCards[2].querySelector('.package-price').textContent = t.package_3_price;
+                packageCards[2].querySelector('small').textContent = t.package_3_duration || "Fully Customized";
             }
 
             // フローセクション
@@ -2472,7 +2485,18 @@
             });
             
             // 初期言語設定（英語）
-            updateContent('en');
+            setTimeout(() => {
+                updateContent('en');
+                console.log('Page loaded in English');
+            }, 100);
+        });
+
+        // ページ読み込み完了後も実行
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                updateContent('en');
+                console.log('Page fully loaded, content updated to English');
+            }, 200);
         });
     </script>
 </body>
