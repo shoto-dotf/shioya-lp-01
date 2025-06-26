@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -236,7 +236,7 @@
 
         .header-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 20px 0;
         }
@@ -277,25 +277,6 @@
             transform: scaleX(1);
         }
 
-        .language-selector {
-            display: flex;
-            gap: 15px;
-        }
-
-        .language-selector a {
-            text-decoration: none;
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            transition: all 0.3s ease;
-            border-radius: 3px;
-        }
-
-        .language-selector a:hover,
-        .language-selector a.active {
-            background: var(--navy);
-            color: var(--white);
-        }
 
         /* ファーストビュー */
         .hero {
@@ -1347,12 +1328,6 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">SHIOYA CLINIC</div>
-                <div class="language-selector">
-                    <a href="#" data-lang="ja">日本語</a>
-                    <a href="#" data-lang="en" class="active">EN</a>
-                    <a href="#" data-lang="th">TH</a>
-                    <a href="#" data-lang="vn">VN</a>
-                </div>
             </div>
         </div>
     </header>
@@ -1415,7 +1390,7 @@
                     </div>
                     <div class="empathy-card">
                         <h3>For those seeking authentic experiences</h3>
-                        <p data-translate="meditation_desc">Beyond medicine, special time to experience Japanese spiritual culture. The tranquility of bonsai and Zen meditation restore the balance of mind and body.</p>
+                        <p>Beyond medicine, special time to experience Japanese spiritual culture. The tranquility of bonsai and Zen meditation restore the balance of mind and body.</p>
                     </div>
                     <div class="empathy-card">
                         <h3>For those protecting family health</h3>
@@ -1485,7 +1460,7 @@
                     <p>
                         Saitama Prefecture has Japan's second largest Vietnamese community and is a leading region of multicultural coexistence.
                     </p>
-                    <p data-translate="global_support_desc">Multilingual staff provide comprehensive support from consultation to aftercare. We also handle visa and accommodation arrangements.</p>
+                    <p>Multilingual staff provide comprehensive support from consultation to aftercare. We also handle visa and accommodation arrangements.</p>
                 </div>
             </div>
         </div>
@@ -1661,29 +1636,29 @@
     <!-- アクセス -->
     <section class="section access">
         <div class="container">
-            <h2 class="fade-in" data-translate="access_title">Access</h2>
+            <h2 class="fade-in">Access</h2>
             <div class="access-grid">
                 <div class="access-info fade-in">
-                    <h3 data-translate="clinic_address_title">Shioya Digestive Internal Medicine Clinic</h3>
-                    <p data-translate="clinic_address">
+                    <h3>Shioya Digestive Internal Medicine Clinic</h3>
+                    <p>
                         〒338-0001<br>
                         3-4-7 Honcho-Higashi, Chuo-ku, Saitama City, Saitama<br>
                         3 minutes walk from JR Saikyo Line Yono-Honmachi Station
                     </p>
-                    <p data-translate="access_details">
+                    <p>
                         <strong>About 35 minutes from Tokyo Station</strong><br>
                         About 25 minutes from Shinjuku Station<br>
                         About 90 minutes from Narita Airport<br>
                         About 60 minutes from Haneda Airport
                     </p>
-                    <p data-translate="clinic_hours">
+                    <p>
                         Clinic Hours: Mon-Sat 9:00-18:00<br>
                         VIP health screenings available outside hours
                     </p>
                 </div>
                 <div class="access-map fade-in">
                     <!-- Google Maps埋め込み -->
-                    <iframe src="https://maps.google.com/maps?q=埼玉県さいたま市中央区本町東3-4-7&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <iframe src="https://maps.google.com/maps?q=35.8617,139.6917&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -1692,15 +1667,15 @@
     <!-- FAQ -->
     <section class="section faq">
         <div class="container">
-            <h2 class="fade-in" data-translate="faq_title">Frequently Asked Questions</h2>
+            <h2 class="fade-in">Frequently Asked Questions</h2>
             <div class="faq-list">
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3 data-translate="faq_1_question">Q. Is VIP service available?</h3>
+                        <h3>Q. Is VIP service available?</h3>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p data-translate="faq_1_answer">Yes, we offer VIP services including completely private room examinations, after-hours services, and dedicated doctors and nurses. Your privacy and comfort are our top priorities. Please let us know your requirements in advance.</p>
+                        <p>Yes, we offer VIP services including completely private room examinations, after-hours services, and dedicated doctors and nurses. Your privacy and comfort are our top priorities. Please let us know your requirements in advance.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
@@ -1714,11 +1689,11 @@
                 </div>
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3 data-translate="faq_2_question">Q. Is a medical visa required?</h3>
+                        <h3>Q. Is a medical visa required?</h3>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p data-translate="faq_2_answer">For health screenings only, a short-term stay visa is sufficient. However, if treatment is required, a medical visa may be necessary. Our partner guarantor institutions provide visa acquisition support.</p>
+                        <p>For health screenings only, a short-term stay visa is sufficient. However, if treatment is required, a medical visa may be necessary. Our partner guarantor institutions provide visa acquisition support.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
@@ -1938,565 +1913,14 @@
             counterObserver.observe(el);
         });
         
-        // 多言語対応
-        const translations = {
-            en: {
-                // ヘッダー
-                clinic_name: "SHIOYA CLINIC",
-                // ヒーローセクション
-                hero_title: "LUXURY WELLNESS",
-                hero_subtitle: "Where world-class precision medicine meets Japanese traditional aesthetics<br>in a completely private healthcare experience",
-                credential_1_title: "30,000+",
-                credential_1_desc: "Precision Health Exams",
-                credential_2_title: "VIP Exclusive Floor",
-                credential_2_desc: "Completely Private Space",
-                credential_3_title: "24/7 Support",
-                credential_3_desc: "Multilingual Concierge",
-                // 統計セクション
-                stat_1_number: "30,000+",
-                stat_1_label: "Precision Health Exams",
-                stat_2_number: "98%",
-                stat_2_label: "Customer Satisfaction",
-                stat_3_number: "95%",
-                stat_3_label: "Early Detection Rate",
-                stat_4_number: "24",
-                stat_4_label: "Countries & Regions Served",
-                // その他のセクション
-                empathy_title: "Investing in health is the ultimate asset building",
-                empathy_desc: "Global executives know this truth.<br>True wealth is not just economic success,<br>but built on the foundation of health.",
-                empathy_card_1_title: "For those who value time",
-                empathy_card_1_desc: "Complete in half a day with no waiting. Executive-exclusive precision medicine.",
-                empathy_card_2_title: "For those seeking authentic experiences",
-                empathy_card_2_desc: "Experience traditional Japanese hospitality in a luxury space.",
-                empathy_card_3_title: "For those protecting family health",
-                empathy_card_3_desc: "Comprehensive health management for your entire family across generations.",
-                value_title: "Three Unique Values",
-                value_1_title: "Advanced Precision Medicine",
-                value_1_desc: "State-of-the-art medical equipment and experienced specialists provide the world's highest level of precision diagnostics. Early detection of diseases that cannot be found elsewhere.",
-                value_2_title: "Fusion with Japanese Culture",
-                value_2_desc: "A luxurious space where traditional Japanese aesthetics and modern medical technology merge. Experience healing of both body and mind.",
-                value_3_title: "Global Concierge",
-                value_3_desc: "Multilingual staff provide comprehensive support from consultation to aftercare. We also handle visa and accommodation arrangements.",
-                package_title: "Health Exam Packages",
-                package_1_title: "Premium Dock",
-                package_1_desc: "Comprehensive basic health examination with the latest medical equipment",
-                package_1_price: "$2,300",
-                package_2_title: "Executive Dock",
-                package_2_desc: "Advanced examination including genetic testing and cutting-edge diagnostic imaging",
-                package_2_price: "$5,200",
-                package_3_title: "Custom Wellness Journey",
-                package_3_desc: "Personalized health program tailored to individual needs",
-                package_3_price: "From $9,800",
-                flow_title: "Service Flow",
-                flow_1_title: "Contact",
-                flow_1_desc: "Initial consultation",
-                flow_2_title: "Plan Proposal",
-                flow_2_desc: "Customized plan design",
-                flow_3_title: "Preparation for Visit",
-                flow_3_desc: "Visa and accommodation support",
-                flow_4_title: "Health Examination",
-                flow_4_desc: "Precision examination",
-                flow_5_title: "Aftercare",
-                flow_5_desc: "Continuous health management",
-                access_title: "Access",
-                // 追加セクション
-                page_title: "SHIOYA LUXURY HEALTH | Premium Digestive Internal Medicine Clinic",
-                clinic_address_title: "Shioya Digestive Internal Medicine Clinic",
-                clinic_address: "1-2-3 Minato-ku, Tokyo 106-0041",
-                clinic_phone: "Tel: +81-3-1234-5678",
-                clinic_hours: "Mon-Fri: 9:00-18:00, Sat: 9:00-15:00",
-                faq_title: "Frequently Asked Questions",
-                faq_1_question: "Is VIP treatment available?",
-                faq_1_answer: "Yes, we offer VIP services including private examination rooms, after-hours appointments, and dedicated doctors and nurses. We prioritize your privacy and comfort. Please let us know your requirements in advance.",
-                faq_2_question: "Do I need a medical visa?",
-                faq_2_answer: "For health examinations only, a short-term stay visa is sufficient. However, if treatment is required, a medical visa may be necessary. Our partner guarantor organization will support your visa application.",
-                meditation_desc: "Beyond medicine, special time to experience Japanese spiritual culture. The tranquility of bonsai and Zen meditation restore the balance of mind and body.",
-                global_support_desc: "Bilingual staff with both medical knowledge and cultural understanding provide heartfelt support that transcends language barriers.",
-                access_details: "<strong>From Tokyo Station: About 35 min</strong><br>From Shinjuku Station: About 25 min<br>From Narita Airport: About 90 min<br>From Haneda Airport: About 60 min"
-            },
-            ja: {
-                // ヘッダー
-                clinic_name: "SHIOYA CLINIC",
-                // ヒーローセクション
-                hero_title: "LUXURY WELLNESS",
-                hero_subtitle: "世界最高峰の精密医療と日本の伝統美が結合する<br>完全プライベートなヘルスケア体験",
-                credential_1_title: "30,000+",
-                credential_1_desc: "精密健診実績",
-                credential_2_title: "VIP専用フロア",
-                credential_2_desc: "完全プライベート空間",
-                credential_3_title: "24/7サポート",
-                credential_3_desc: "多言語コンシェルジュ",
-                // 統計セクション
-                stat_1_number: "30,000+",
-                stat_1_label: "精密健診実績",
-                stat_2_number: "98%",
-                stat_2_label: "顧客満足度",
-                stat_3_number: "95%",
-                stat_3_label: "早期発見率",
-                stat_4_number: "24",
-                stat_4_label: "国と地域からの来院",
-                // その他のセクション
-                empathy_title: "健康への投資が、最高の資産形成",
-                empathy_desc: "世界のエグゼクティブは知っています。<br>真の豊かさとは、単なる経済的成功ではなく、<br>健康という土台の上に築かれるものだということを。",
-                empathy_card_1_title: "時間の価値を知るあなたへ",
-                empathy_card_1_desc: "待ち時間なし、半日で完了。エグゼクティブ専用の精密医療。",
-                empathy_card_2_title: "本物の体験を求めるあなたへ",
-                empathy_card_2_desc: "ラグジュアリー空間で味わう、日本の伝統的なおもてなし。",
-                empathy_card_3_title: "家族の健康を守るあなたへ",
-                empathy_card_3_desc: "世代を超えて、ご家族全員の健康を総合的にマネジメント。",
-                value_title: "3つの独自価値",
-                value_1_title: "最先端の精密医療",
-                value_1_desc: "最新の医療機器と経験豊富な専門医により、世界最高水準の精密診断を提供。他では発見できない疾患の早期発見を実現します。",
-                value_2_title: "日本文化との融合",
-                value_2_desc: "伝統的な日本の美意識と最先端医療技術が融合したラグジュアリー空間。心身ともに癒される体験をご提供します。",
-                value_3_title: "グローバル・コンシェルジュ",
-                value_3_desc: "多言語対応スタッフが相談からアフターケアまで包括的にサポート。ビザや宿泊の手配も承ります。",
-                package_title: "健診パッケージ",
-                package_1_title: "プレミアムドック",
-                package_1_desc: "最新の医療機器による包括的な基本健診",
-                package_1_price: "¥350,000",
-                package_2_title: "エグゼクティブドック",
-                package_2_desc: "遺伝子検査・最先端画像診断を含む高度検査",
-                package_2_price: "¥800,000",
-                package_3_title: "オーダーメイド・ウェルネスジャーニー",
-                package_3_desc: "個人のニーズに合わせた完全カスタマイズ健康プログラム",
-                package_3_price: "¥1,500,000〜",
-                flow_title: "ご利用の流れ",
-                flow_1_title: "お問い合わせ",
-                flow_1_desc: "初回ご相談",
-                flow_2_title: "プラン提案",
-                flow_2_desc: "オーダーメイドプラン設計",
-                flow_3_title: "来日準備",
-                flow_3_desc: "ビザ・宿泊サポート",
-                flow_4_title: "健診実施",
-                flow_4_desc: "精密検査",
-                flow_5_title: "アフターケア",
-                flow_5_desc: "継続的な健康管理",
-                access_title: "アクセス",
-                // 追加セクション
-                page_title: "SHIOYA LUXURY HEALTH | 最高級消化器内科クリニック",
-                clinic_address_title: "しおや消化器内科クリニック",
-                clinic_address: "〒106-0041 東京都港区1-2-3",
-                clinic_phone: "Tel: 03-1234-5678",
-                clinic_hours: "月-金: 9:00-18:00, 土: 9:00-15:00",
-                faq_title: "よくある質問",
-                faq_1_question: "VIP対応は可能ですか？",
-                faq_1_answer: "はい、完全個室での検査、時間外対応、専属医師・看護師の配置など、お客様のプライバシーと快適性を最優先したVIP対応が可能です。事前にご要望をお聞かせください。",
-                faq_2_question: "医療ビザは必要ですか？",
-                faq_2_answer: "健診のみの場合は短期滞在ビザで可能ですが、治療が必要な場合は医療ビザが必要になることがあります。当院提携の身元保証機関がビザ取得をサポートいたします。",
-                meditation_desc: "医療だけでなく、日本の精神文化に触れる特別な時間。盆栽の静寂、禅の瞑想が、心身のバランスを整えます。",
-                global_support_desc: "医療知識と文化理解を兼ね備えたバイリンガルスタッフが、言葉の壁を超えた心の通うサポートを提供します。",
-                access_details: "<strong>東京駅から約35分</strong><br>新宿駅から約25分<br>成田空港から約90分<br>羽田空港から約60分"
-            },
-            th: {
-                // ヘッダー
-                clinic_name: "SHIOYA CLINIC",
-                // ヒーローセクション
-                hero_title: "LUXURY WELLNESS",
-                hero_subtitle: "การแพทย์ที่แม่นยำระดับโลกผสานกับความงามแบบญี่ปุ่น<br>ในการดูแลสุขภาพส่วนตัวอย่างสมบูรณ์",
-                credential_1_title: "30,000+",
-                credential_1_desc: "การตรวจสุขภาพแบบแม่นยำ",
-                credential_2_title: "ชั้น VIP เฉพาะ",
-                credential_2_desc: "พื้นที่ส่วนตัวอย่างสมบูรณ์",
-                credential_3_title: "บริการ 24/7",
-                credential_3_desc: "คอนเซียร์จหลายภาษา",
-                // 統計セクション
-                stat_1_number: "30,000+",
-                stat_1_label: "การตรวจสุขภาพแบบแม่นยำ",
-                stat_2_number: "98%",
-                stat_2_label: "ความพึงพอใจของลูกค้า",
-                stat_3_number: "95%",
-                stat_3_label: "อัตราการตรวจพบเร็ว",
-                stat_4_number: "24",
-                stat_4_label: "ประเทศและภูมิภาคที่ให้บริการ",
-                // その他のセクション
-                empathy_title: "การลงทุนด้านสุขภาพคือการสร้างสินทรัพย์ที่ดีที่สุด",
-                empathy_desc: "ผู้บริหารระดับโลกรู้ความจริงนี้<br>ความมั่งคั่งที่แท้จริงไม่ใช่แค่ความสำเร็จทางเศรษฐกิจ<br>แต่สร้างขึ้นบนรากฐานของสุขภาพ",
-                empathy_card_1_title: "สำหรับท่านที่รู้คุณค่าของเวลา",
-                empathy_card_1_desc: "เสร็จสมบูรณ์ในครึ่งวัน ไม่ต้องรอคิว การแพทย์แม่นยำเฉพาะสำหรับผู้บริหาร",
-                empathy_card_2_title: "สำหรับท่านที่แสวงหาประสบการณ์แท้จริง",
-                empathy_card_2_desc: "สัมผัสการต้อนรับแบบญี่ปุ่นดั้งเดิมในพื้นที่หรูหรา",
-                empathy_card_3_title: "สำหรับท่านที่ปกป้องสุขภาพครอบครัว",
-                empathy_card_3_desc: "การจัดการสุขภาพอย่างครอบคลุมสำหรับครอบครัวทุกช่วงวัย",
-                value_title: "สามคุณค่าที่เป็นเอกลักษณ์",
-                value_1_title: "การแพทย์แม่นยำที่ล้ำสมัย",
-                value_1_desc: "อุปกรณ์การแพทย์ล่าสุดและแพทย์ผู้เชี่ยวชาญมากประสบการณ์ให้การวินิจฉัยแม่นยำระดับโลก ตรวจพบโรคในระยะเริ่มต้นที่ที่อื่นไม่สามารถค้นพบได้",
-                value_2_title: "การผสานกับวัฒนธรรมญี่ปุ่น",
-                value_2_desc: "พื้นที่หรูหราที่ผสานสุนทรียศาสตร์ญี่ปุ่นดั้งเดิมกับเทคโนโลยีการแพทย์สมัยใหม่ ประสบการณ์การรักษาทั้งร่างกายและจิตใจ",
-                value_3_title: "คอนเซียร์จระดับโลก",
-                value_3_desc: "พนักงานที่ใช้ภาษาหลายภาษาให้การสนับสนุนอย่างครอบคลุมตั้งแต่การปรึกษาจนถึงการดูแลหลังการรักษา รวมถึงการจัดการวีซ่าและที่พัก",
-                package_title: "แพ็คเกจตรวจสุขภาพ",
-                package_1_title: "พรีเมียมดอค",
-                package_1_desc: "การตรวจสุขภาพพื้นฐานครอบคลุมด้วยอุปกรณ์การแพทย์ล่าสุด",
-                package_1_price: "75,000 บาท",
-                package_2_title: "เอ็กเซกคิวทีฟดอค",
-                package_2_desc: "การตรวจสขภาพขั้นสูงรวมถึงการตรวจทางพันธุกรรมและการวินิจฉัยภาพขั้นสูง",
-                package_2_price: "170,000 บาท",
-                package_3_title: "เวลเนสเจอร์นีย์แบบออเดอร์เมด",
-                package_3_desc: "โปรแกรมสุขภาพที่ปรับแต่งตามความต้องการส่วนบุคคล",
-                package_3_price: "ตั้งแต่ 320,000 บาท",
-                flow_title: "ขั้นตอนการใช้บริการ",
-                flow_1_title: "ติดต่อสอบถาม",
-                flow_1_desc: "การปรึกษาเบื้องต้น",
-                flow_2_title: "เสนอแผน",
-                flow_2_desc: "การออกแบบแผนแบบกำหนดเอง",
-                flow_3_title: "เตรียมการเดินทางมาญี่ปุ่น",
-                flow_3_desc: "สนับสนุนวีซ่าและที่พัก",
-                flow_4_title: "ดำเนินการตรวจสุขภาพ",
-                flow_4_desc: "การตรวจแม่นยำ",
-                flow_5_title: "การดูแลหลังการรักษา",
-                flow_5_desc: "การจัดการสุขภาพอย่างต่อเนื่อง",
-                access_title: "การเดินทาง",
-                // 追加セクション
-                page_title: "SHIOYA LUXURY HEALTH | คลินิกโรคทางเดินอาหารระดับพรีเมียม",
-                clinic_address_title: "คลินิกโรคทางเดินอาหารชิโอยะ",
-                clinic_address: "1-2-3 มินาโตะ-คุ โตเกียว 106-0041",
-                clinic_phone: "โทร: +81-3-1234-5678",
-                clinic_hours: "จันทร์-ศุกร์: 9:00-18:00, เสาร์: 9:00-15:00",
-                faq_title: "คำถามที่พบบ่อย",
-                faq_1_question: "สามารถให้บริการ VIP ได้หรือไม่?",
-                faq_1_answer: "ได้ครับ เราให้บริการ VIP รวมถึงห้องตรวจส่วนตัว การนัดนอกเวลา และมีแพทย์และพยาบาลเฉพาะ เราให้ความสำคัญกับความเป็นส่วนตัวและความสะดวกสบายของคุณเป็นหลัก กรุณาแจ้งความต้องการล่วงหน้า",
-                faq_2_question: "จำเป็นต้องมีวีซ่าการรักษาพยาบาลหรือไม่?",
-                faq_2_answer: "สำหรับการตรวจสุขภาพเท่านั้น วีซ่าพำนักระยะสั้นก็เพียงพอ แต่หากต้องการการรักษา อาจจำเป็นต้องมีวีซ่าการรักษาพยาบาล องค์กรค้ำประกันที่เป็นพันธมิตรของเราจะสนับสนุนการขอวีซ่า",
-                meditation_desc: "นอกเหนือจากการแพทย์ เวลาพิเศษเพื่อสัมผัสวัฒนธรรมจิตวิญญาณญี่ปุ่น ความเงียบสงบของบอนไซ การทำสมาธิแบบเซ็น ช่วยปรับสมดุลของจิตใจและร่างกาย",
-                global_support_desc: "พนักงานที่พูดได้หลายภาษา มีทั้งความรู้ทางการแพทย์และความเข้าใจวัฒนธรรม ให้การสนับสนุนอย่างใจเข้าใจที่เหนือกว่าอุปสรรคทางภาษา",
-                access_details: "<strong>จากสถานีโตเกียว: ประมาณ 35 นาที</strong><br>จากสถานีชินจูกุ: ประมาณ 25 นาที<br>จากสนามบินนาริตะ: ประมาณ 90 นาที<br>จากสนามบินฮาเนดะ: ประมาณ 60 นาที"
-            },
-            vn: {
-                // ヘッダー
-                clinic_name: "SHIOYA CLINIC",
-                // ヒーローセクション
-                hero_title: "LUXURY WELLNESS",
-                hero_subtitle: "Nơi y học chính xác đẳng cấp thế giới kết hợp với thẩm mỹ truyền thống Nhật Bản<br>trong trải nghiệm chăm sóc sức khỏe hoàn toàn riêng tư",
-                credential_1_title: "30,000+",
-                credential_1_desc: "Khám Sức Khỏe Chính Xác",
-                credential_2_title: "Tầng VIP Riêng",
-                credential_2_desc: "Không Gian Hoàn Toàn Riêng Tư",
-                credential_3_title: "Hỗ Trợ 24/7",
-                credential_3_desc: "Concierge Đa Ngôn Ngữ",
-                // 統計セクション
-                stat_1_number: "30,000+",
-                stat_1_label: "Khám Sức Khỏe Chính Xác",
-                stat_2_number: "98%",
-                stat_2_label: "Mức Độ Hài Lòng Khách Hàng",
-                stat_3_number: "95%",
-                stat_3_label: "Tỷ Lệ Phát Hiện Sớm",
-                stat_4_number: "24",
-                stat_4_label: "Quốc Gia Và Vùng Miền Phục Vụ",
-                // その他のセクション
-                empathy_title: "Đầu tư vào sức khỏe là việc xây dựng tài sản tốt nhất",
-                empathy_desc: "Các giám đốc điều hành toàn cầu biết sự thật này.<br>Sự giàu có thực sự không chỉ là thành công kinh tế,<br>mà được xây dựng trên nền tảng sức khỏe.",
-                empathy_card_1_title: "Dành cho những người hiểu giá trị thời gian",
-                empathy_card_1_desc: "Hoàn thành trong nửa ngày, không cần chờ đợi. Y học chính xác dành riêng cho giám đốc điều hành.",
-                empathy_card_2_title: "Dành cho những người tìm kiếm trải nghiệm chân thực",
-                empathy_card_2_desc: "Trải nghiệm lòng hiếu khách truyền thống Nhật Bản trong không gian sang trọng.",
-                empathy_card_3_title: "Dành cho những người bảo vệ sức khỏe gia đình",
-                empathy_card_3_desc: "Quản lý sức khỏe toàn diện cho toàn thể gia đình qua các thế hệ.",
-                value_title: "Ba Giá Trị Độc Đáo",
-                value_1_title: "Y Học Chính Xác Tiên Tiến",
-                value_1_desc: "Thiết bị y tế hiện đại nhất và các chuyên gia giàu kinh nghiệm cung cấp chẩn đoán chính xác ở mức độ cao nhất thế giới. Phát hiện sớm các bệnh không thể tìm thấy ở nơi khác.",
-                value_2_title: "Kết Hợp Với Văn Hóa Nhật Bản",
-                value_2_desc: "Không gian sang trọng nơi thẩm mỹ truyền thống Nhật Bản và công nghệ y tế hiện đại hòa quyện. Trải nghiệm chữa lành cả thể xác và tinh thần.",
-                value_3_title: "Concierge Toàn Cầu",
-                value_3_desc: "Đội ngũ nhân viên đa ngôn ngữ hỗ trợ toàn diện từ tư vấn đến chăm sóc sau điều trị. Chúng tôi cũng xử lý việc xin visa và sắp xếp chỗ ở.",
-                package_title: "Gói Khám Sức Khỏe",
-                package_1_title: "Premium Dock",
-                package_1_desc: "Khám sức khỏe cơ bản toàn diện với thiết bị y tế hiện đại nhất",
-                package_1_price: "8.000.000 VND",
-                package_2_title: "Executive Dock",
-                package_2_desc: "Khám nâng cao bao gồm xét nghiệm di truyền và chẩn đoán hình ảnh tiên tiến",
-                package_2_price: "18.000.000 VND",
-                package_3_title: "Hành Trình Sức Khỏe Tùy Chỉnh",
-                package_3_desc: "Chương trình sức khỏe được cá nhân hóa theo nhu cầu cá nhân",
-                package_3_price: "Từ 35.000.000 VND",
-                flow_title: "Quy Trình Dịch Vụ",
-                flow_1_title: "Liên Hệ",
-                flow_1_desc: "Tư vấn ban đầu",
-                flow_2_title: "Đề Xuất Kế Hoạch",
-                flow_2_desc: "Thiết kế kế hoạch tùy chỉnh",
-                flow_3_title: "Chuẩn Bị Chuyến Thăm",
-                flow_3_desc: "Hỗ trợ visa và chỗ ở",
-                flow_4_title: "Thực Hiện Khám Sức Khỏe",
-                flow_4_desc: "Khám chính xác",
-                flow_5_title: "Chăm Sóc Sau Điều Trị",
-                flow_5_desc: "Quản lý sức khỏe liên tục",
-                access_title: "Đường Đi",
-                // 追加セクション
-                page_title: "SHIOYA LUXURY HEALTH | Phòng Khám Nội Khoa Tiêu Hóa Cao Cấp",
-                clinic_address_title: "Phòng Khám Nội Khoa Tiêu Hóa Shioya",
-                clinic_address: "1-2-3 Minato-ku, Tokyo 106-0041",
-                clinic_phone: "Điện thoại: +81-3-1234-5678",
-                clinic_hours: "Thứ 2-6: 9:00-18:00, Thứ 7: 9:00-15:00",
-                faq_title: "Câu Hỏi Thường Gặp",
-                faq_1_question: "Có thể được phục vụ VIP không?",
-                faq_1_answer: "Có, chúng tôi cung cấp dịch vụ VIP bao gồm phòng khám riêng, hẹn ngoài giờ, và bác sĩ cùng y tá chuyên trách. Chúng tôi ưu tiên quyền riêng tư và sự thoải mái của bạn. Vui lòng cho chúng tôi biết yêu cầu của bạn trước.",
-                faq_2_question: "Có cần visa y tế không?",
-                faq_2_answer: "Chỉ để khám sức khỏe, visa lưu trú ngắn hạn là đủ. Tuy nhiên, nếu cần điều trị, có thể cần visa y tế. Tổ chức bảo lãnh đối tác của chúng tôi sẽ hỗ trợ việc xin visa.",
-                meditation_desc: "Ngoài y học, thời gian đặc biệt để trải nghiệm văn hóa tinh thần Nhật Bản. Sự tĩnh lặng của bonsai, thiền Zen giúp cân bằng tâm thể.",
-                global_support_desc: "Đội ngũ song ngữ với kiến thức y tế và hiểu biết văn hóa cung cấp hỗ trợ chân thành vượt qua rào cản ngôn ngữ.",
-                access_details: "<strong>Từ ga Tokyo: Khoảng 35 phút</strong><br>Từ ga Shinjuku: Khoảng 25 phút<br>Từ sân bay Narita: Khoảng 90 phút<br>Từ sân bay Haneda: Khoảng 60 phút"
-            }
-        };
-
-        let currentLanguage = 'en'; // デフォルト言語を英語に設定
-
-        function updateContent(lang) {
-            const t = translations[lang];
-            
-            // 各要素を更新
-            document.querySelector('.logo').textContent = t.clinic_name;
-            document.querySelector('.hero-title-wrapper h1').textContent = t.hero_title;
-            document.querySelector('.hero-subtitle').innerHTML = t.hero_subtitle;
-            
-            // クレデンシャル更新
-            const credentials = document.querySelectorAll('.credential-item');
-            if (credentials[0]) {
-                credentials[0].querySelector('strong').textContent = t.credential_1_title;
-                credentials[0].querySelector('small').textContent = t.credential_1_desc;
-            }
-            if (credentials[1]) {
-                credentials[1].querySelector('strong').textContent = t.credential_2_title;
-                credentials[1].querySelector('small').textContent = t.credential_2_desc;
-            }
-            if (credentials[2]) {
-                credentials[2].querySelector('strong').textContent = t.credential_3_title;
-                credentials[2].querySelector('small').textContent = t.credential_3_desc;
-            }
-            
-            // 統計セクション更新
-            const stats = document.querySelectorAll('.stat-item');
-            if (stats[0]) {
-                stats[0].querySelector('.stat-number').textContent = t.stat_1_number;
-                stats[0].querySelector('.stat-label').textContent = t.stat_1_label;
-            }
-            if (stats[1]) {
-                stats[1].querySelector('.stat-number').textContent = t.stat_2_number;
-                stats[1].querySelector('.stat-label').textContent = t.stat_2_label;
-            }
-            if (stats[2]) {
-                stats[2].querySelector('.stat-number').textContent = t.stat_3_number;
-                stats[2].querySelector('.stat-label').textContent = t.stat_3_label;
-            }
-            if (stats[3]) {
-                stats[3].querySelector('.stat-number').textContent = t.stat_4_number;
-                stats[3].querySelector('.stat-label').textContent = t.stat_4_label;
-            }
-
-            // その他のセクション更新
-            // 共感セクション
-            const empathyTitle = document.querySelector('.empathy h2');
-            if (empathyTitle) empathyTitle.textContent = t.empathy_title;
-            
-            const empathyDesc = document.querySelector('.empathy-content > p');
-            if (empathyDesc) empathyDesc.innerHTML = t.empathy_desc;
-            
-            const empathyCards = document.querySelectorAll('.empathy-card');
-            if (empathyCards[0]) {
-                empathyCards[0].querySelector('h3').textContent = t.empathy_card_1_title;
-                empathyCards[0].querySelector('p').textContent = t.empathy_card_1_desc;
-            }
-            if (empathyCards[1]) {
-                empathyCards[1].querySelector('h3').textContent = t.empathy_card_2_title;
-                empathyCards[1].querySelector('p').textContent = t.empathy_card_2_desc;
-            }
-            if (empathyCards[2]) {
-                empathyCards[2].querySelector('h3').textContent = t.empathy_card_3_title;
-                empathyCards[2].querySelector('p').textContent = t.empathy_card_3_desc;
-            }
-
-            // 価値提案セクション
-            const valueTitle = document.querySelector('.value-prop h2');
-            if (valueTitle) valueTitle.textContent = t.value_title;
-            
-            const valueItems = document.querySelectorAll('.value-item');
-            if (valueItems[0]) {
-                valueItems[0].querySelector('h3').textContent = t.value_1_title;
-                const valueP = valueItems[0].querySelectorAll('p');
-                if (valueP[1]) valueP[1].textContent = t.value_1_desc;
-            }
-            if (valueItems[1]) {
-                valueItems[1].querySelector('h3').textContent = t.value_2_title;
-                const valueP = valueItems[1].querySelectorAll('p');
-                if (valueP[1]) valueP[1].textContent = t.value_2_desc;
-            }
-            if (valueItems[2]) {
-                valueItems[2].querySelector('h3').textContent = t.value_3_title;
-                const valueP = valueItems[2].querySelectorAll('p');
-                if (valueP[1]) valueP[1].textContent = t.value_3_desc;
-            }
-
-            // パッケージセクション
-            const packageTitle = document.querySelector('.packages h2');
-            if (packageTitle) packageTitle.textContent = t.package_title;
-            
-            const packageCards = document.querySelectorAll('.package-card');
-            if (packageCards[0]) {
-                packageCards[0].querySelector('h3').textContent = t.package_1_title;
-                packageCards[0].querySelector('.package-price').textContent = t.package_1_price;
-                packageCards[0].querySelector('small').textContent = t.package_1_duration || "Duration: 3-4 hours";
-            }
-            if (packageCards[1]) {
-                packageCards[1].querySelector('h3').textContent = t.package_2_title;
-                packageCards[1].querySelector('.package-price').textContent = t.package_2_price;
-                packageCards[1].querySelector('small').textContent = t.package_2_duration || "Duration: 5-6 hours";
-            }
-            if (packageCards[2]) {
-                packageCards[2].querySelector('h3').textContent = t.package_3_title;
-                packageCards[2].querySelector('.package-price').textContent = t.package_3_price;
-                packageCards[2].querySelector('small').textContent = t.package_3_duration || "Fully Customized";
-            }
-
-            // フローセクション
-            const flowTitle = document.querySelector('.flow h2');
-            if (flowTitle) flowTitle.textContent = t.flow_title;
-            
-            const flowItems = document.querySelectorAll('.flow-item');
-            if (flowItems[0]) {
-                flowItems[0].querySelector('h3').textContent = t.flow_1_title;
-                flowItems[0].querySelector('p').textContent = t.flow_1_desc;
-            }
-            if (flowItems[1]) {
-                flowItems[1].querySelector('h3').textContent = t.flow_2_title;
-                flowItems[1].querySelector('p').textContent = t.flow_2_desc;
-            }
-            if (flowItems[2]) {
-                flowItems[2].querySelector('h3').textContent = t.flow_3_title;
-                flowItems[2].querySelector('p').textContent = t.flow_3_desc;
-            }
-            if (flowItems[3]) {
-                flowItems[3].querySelector('h3').textContent = t.flow_4_title;
-                flowItems[3].querySelector('p').textContent = t.flow_4_desc;
-            }
-            if (flowItems[4]) {
-                flowItems[4].querySelector('h3').textContent = t.flow_5_title;
-                flowItems[4].querySelector('p').textContent = t.flow_5_desc;
-            }
-
-            // アクセスセクション
-            const accessTitle = document.querySelector('.access h2');
-            if (accessTitle) accessTitle.textContent = t.access_title;
-
-            // ページタイトル
-            document.title = t.page_title;
-
-            // クリニック情報
-            const clinicTitle = document.querySelector('[data-translate="clinic_address_title"]');
-            if (clinicTitle) clinicTitle.textContent = t.clinic_address_title;
-            
-            const clinicAddress = document.querySelector('[data-translate="clinic_address"]');
-            if (clinicAddress) clinicAddress.textContent = t.clinic_address;
-            
-            const clinicPhone = document.querySelector('[data-translate="clinic_phone"]');
-            if (clinicPhone) clinicPhone.textContent = t.clinic_phone;
-            
-            const clinicHours = document.querySelector('[data-translate="clinic_hours"]');
-            if (clinicHours) clinicHours.innerHTML = t.clinic_hours;
-            
-            const accessDetails = document.querySelector('[data-translate="access_details"]');
-            if (accessDetails) accessDetails.innerHTML = t.access_details;
-
-            // FAQ
-            const faqTitle = document.querySelector('[data-translate="faq_title"]');
-            if (faqTitle) faqTitle.textContent = t.faq_title;
-            
-            const faq1Question = document.querySelector('[data-translate="faq_1_question"]');
-            if (faq1Question) faq1Question.textContent = t.faq_1_question;
-            
-            const faq1Answer = document.querySelector('[data-translate="faq_1_answer"]');
-            if (faq1Answer) faq1Answer.textContent = t.faq_1_answer;
-            
-            const faq2Question = document.querySelector('[data-translate="faq_2_question"]');
-            if (faq2Question) faq2Question.textContent = t.faq_2_question;
-            
-            const faq2Answer = document.querySelector('[data-translate="faq_2_answer"]');
-            if (faq2Answer) faq2Answer.textContent = t.faq_2_answer;
-
-            // 特別な説明
-            const meditationDesc = document.querySelector('[data-translate="meditation_desc"]');
-            if (meditationDesc) meditationDesc.textContent = t.meditation_desc;
-            
-            const globalSupportDesc = document.querySelector('[data-translate="global_support_desc"]');
-            if (globalSupportDesc) globalSupportDesc.textContent = t.global_support_desc;
-
-            // 既存の料金表示
-            const existingPrices = document.querySelectorAll('.package-price');
-            existingPrices.forEach((price, index) => {
-                if (index === 0) price.textContent = t.package_1_price;
-                if (index === 1) price.textContent = t.package_2_price;
-                if (index === 2) price.textContent = t.package_3_price;
-            });
-
-            // CTA buttons
-            const ctaButtons = document.querySelectorAll('.cta-button');
-            if (ctaButtons[0]) ctaButtons[0].textContent = t.cta_button_1 || "Inquire for Details";
-            if (ctaButtons[1]) ctaButtons[1].textContent = t.cta_button_2 || "Priority Booking";
-            if (ctaButtons[2]) ctaButtons[2].textContent = t.cta_button_3 || "Consultation";
-
-            // Final CTA section
-            const finalCTA = document.querySelector('.final-cta h2');
-            if (finalCTA) finalCTA.textContent = t.final_cta_title || "Start Your Health Investment Today";
-            
-            const finalCTADesc = document.querySelector('.final-cta p');
-            if (finalCTADesc) finalCTADesc.textContent = t.final_cta_desc || "Our specialist staff will propose the optimal wellness journey for you";
-
-            // Contact method labels
-            const contactMethods = document.querySelectorAll('.contact-method span');
-            if (contactMethods[2]) contactMethods[2].textContent = t.contact_email || "Email";
-            if (contactMethods[3]) contactMethods[3].textContent = t.contact_form || "Contact Form";
-
-            // Additional FAQ items
-            const allFAQQuestions = document.querySelectorAll('.faq-question h3');
-            const allFAQAnswers = document.querySelectorAll('.faq-answer p');
-            
-            if (allFAQQuestions[2]) allFAQQuestions[2].textContent = t.faq_3_question || "Q. When will I receive my test results?";
-            if (allFAQAnswers[2]) allFAQAnswers[2].textContent = t.faq_3_answer || "Basic test results are provided on the same day. Detailed pathology results are sent as translated reports in your native language within 1-2 weeks. Online result consultations are also available.";
-            
-            if (allFAQQuestions[3]) allFAQQuestions[3].textContent = t.faq_4_question || "Q. What payment methods are available?";
-            if (allFAQAnswers[3]) allFAQAnswers[3].textContent = t.faq_4_answer || "We accept cash, credit cards (VISA, MasterCard, AMEX), bank transfers, and cryptocurrency payments. Please consult us about international insurance coverage.";
-
-            if (allFAQQuestions[1]) allFAQQuestions[1].textContent = t.faq_dietary_question || "Q. Do you accommodate religious considerations and dietary restrictions?";
-            if (allFAQAnswers[1]) allFAQAnswers[1].textContent = t.faq_dietary_answer || "We accommodate all dietary restrictions including Halal, vegetarian, vegan, and allergy requirements. We also provide appropriate accommodations for prayer times and other religious considerations when notified in advance.";
-        }
-
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            
-            // アクティブ状態更新
-            document.querySelectorAll('.language-selector a').forEach(link => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-            
-            // コンテンツ更新
-            updateContent(lang);
+        // フォーム表示（英語専用）
+        function showForm() {
+            alert('Contact form is under preparation. Please contact us via WhatsApp, Zalo, or email.');
         }
 
         // 初期化
         document.addEventListener('DOMContentLoaded', () => {
             createSakura();
-            
-            // 言語ボタンにイベントリスナー追加
-            document.querySelectorAll('.language-selector a').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = e.target.getAttribute('data-lang');
-                    switchLanguage(lang);
-                });
-            });
-            
-            // 初期言語設定（英語）
-            setTimeout(() => {
-                updateContent('en');
-                console.log('Page loaded in English');
-            }, 100);
-        });
-
-        // ページ読み込み完了後も実行
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                updateContent('en');
-                console.log('Page fully loaded, content updated to English');
-            }, 200);
         });
     </script>
 </body>
