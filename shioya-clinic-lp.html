@@ -1345,10 +1345,10 @@
             <div class="header-content">
                 <div class="logo">SHIOYA CLINIC</div>
                 <div class="language-selector">
-                    <a href="#" class="active">日本語</a>
-                    <a href="#">EN</a>
-                    <a href="#">TH</a>
-                    <a href="#">VN</a>
+                    <a href="#" data-lang="ja">日本語</a>
+                    <a href="#" data-lang="en" class="active">EN</a>
+                    <a href="#" data-lang="th">TH</a>
+                    <a href="#" data-lang="vn">VN</a>
                 </div>
             </div>
         </div>
@@ -1935,9 +1935,171 @@
             counterObserver.observe(el);
         });
         
+        // 多言語対応
+        const translations = {
+            en: {
+                // ヘッダー
+                clinic_name: "SHIOYA CLINIC",
+                // ヒーローセクション
+                hero_title: "LUXURY WELLNESS",
+                hero_subtitle: "Where world-class precision medicine meets Japanese traditional aesthetics<br>in a completely private healthcare experience",
+                credential_1_title: "30,000+",
+                credential_1_desc: "Precision Health Exams",
+                credential_2_title: "VIP Exclusive Floor",
+                credential_2_desc: "Completely Private Space",
+                credential_3_title: "24/7 Support",
+                credential_3_desc: "Multilingual Concierge",
+                // 統計セクション
+                stat_1_number: "30,000+",
+                stat_1_label: "Precision Health Exams",
+                stat_2_number: "98%",
+                stat_2_label: "Customer Satisfaction",
+                stat_3_number: "95%",
+                stat_3_label: "Early Detection Rate",
+                stat_4_number: "24",
+                stat_4_label: "Countries & Regions Served"
+            },
+            ja: {
+                // ヘッダー
+                clinic_name: "SHIOYA CLINIC",
+                // ヒーローセクション
+                hero_title: "LUXURY WELLNESS",
+                hero_subtitle: "世界最高峰の精密医療と日本の伝統美が結合する<br>完全プライベートなヘルスケア体験",
+                credential_1_title: "30,000+",
+                credential_1_desc: "精密健診実績",
+                credential_2_title: "VIP専用フロア",
+                credential_2_desc: "完全プライベート空間",
+                credential_3_title: "24/7サポート",
+                credential_3_desc: "多言語コンシェルジュ",
+                // 統計セクション
+                stat_1_number: "30,000+",
+                stat_1_label: "精密健診実績",
+                stat_2_number: "98%",
+                stat_2_label: "顧客満足度",
+                stat_3_number: "95%",
+                stat_3_label: "早期発見率",
+                stat_4_number: "24",
+                stat_4_label: "国と地域からの来院"
+            },
+            th: {
+                // ヘッダー
+                clinic_name: "SHIOYA CLINIC",
+                // ヒーローセクション
+                hero_title: "LUXURY WELLNESS",
+                hero_subtitle: "การแพทย์ที่แม่นยำระดับโลกผสานกับความงามแบบญี่ปุ่น<br>ในการดูแลสุขภาพส่วนตัวอย่างสมบูรณ์",
+                credential_1_title: "30,000+",
+                credential_1_desc: "การตรวจสุขภาพแบบแม่นยำ",
+                credential_2_title: "ชั้น VIP เฉพาะ",
+                credential_2_desc: "พื้นที่ส่วนตัวอย่างสมบูรณ์",
+                credential_3_title: "บริการ 24/7",
+                credential_3_desc: "คอนเซียร์จหลายภาษา",
+                // 統計セクション
+                stat_1_number: "30,000+",
+                stat_1_label: "การตรวจสุขภาพแบบแม่นยำ",
+                stat_2_number: "98%",
+                stat_2_label: "ความพึงพอใจของลูกค้า",
+                stat_3_number: "95%",
+                stat_3_label: "อัตราการตรวจพบเร็ว",
+                stat_4_number: "24",
+                stat_4_label: "ประเทศและภูมิภาคที่ให้บริการ"
+            },
+            vn: {
+                // ヘッダー
+                clinic_name: "SHIOYA CLINIC",
+                // ヒーローセクション
+                hero_title: "LUXURY WELLNESS",
+                hero_subtitle: "Nơi y học chính xác đẳng cấp thế giới kết hợp với thẩm mỹ truyền thống Nhật Bản<br>trong trải nghiệm chăm sóc sức khỏe hoàn toàn riêng tư",
+                credential_1_title: "30,000+",
+                credential_1_desc: "Khám Sức Khỏe Chính Xác",
+                credential_2_title: "Tầng VIP Riêng",
+                credential_2_desc: "Không Gian Hoàn Toàn Riêng Tư",
+                credential_3_title: "Hỗ Trợ 24/7",
+                credential_3_desc: "Concierge Đa Ngôn Ngữ",
+                // 統計セクション
+                stat_1_number: "30,000+",
+                stat_1_label: "Khám Sức Khỏe Chính Xác",
+                stat_2_number: "98%",
+                stat_2_label: "Mức Độ Hài Lòng Khách Hàng",
+                stat_3_number: "95%",
+                stat_3_label: "Tỷ Lệ Phát Hiện Sớm",
+                stat_4_number: "24",
+                stat_4_label: "Quốc Gia Và Vùng Miền Phục Vụ"
+            }
+        };
+
+        let currentLanguage = 'en'; // デフォルト言語を英語に設定
+
+        function updateContent(lang) {
+            const t = translations[lang];
+            
+            // 各要素を更新
+            document.querySelector('.logo').textContent = t.clinic_name;
+            document.querySelector('.hero-title-wrapper h1').textContent = t.hero_title;
+            document.querySelector('.hero-subtitle').innerHTML = t.hero_subtitle;
+            
+            // クレデンシャル更新
+            const credentials = document.querySelectorAll('.credential-item');
+            if (credentials[0]) {
+                credentials[0].querySelector('strong').textContent = t.credential_1_title;
+                credentials[0].querySelector('small').textContent = t.credential_1_desc;
+            }
+            if (credentials[1]) {
+                credentials[1].querySelector('strong').textContent = t.credential_2_title;
+                credentials[1].querySelector('small').textContent = t.credential_2_desc;
+            }
+            if (credentials[2]) {
+                credentials[2].querySelector('strong').textContent = t.credential_3_title;
+                credentials[2].querySelector('small').textContent = t.credential_3_desc;
+            }
+            
+            // 統計セクション更新
+            const stats = document.querySelectorAll('.stat-item');
+            if (stats[0]) {
+                stats[0].querySelector('.stat-number').textContent = t.stat_1_number;
+                stats[0].querySelector('.stat-label').textContent = t.stat_1_label;
+            }
+            if (stats[1]) {
+                stats[1].querySelector('.stat-number').textContent = t.stat_2_number;
+                stats[1].querySelector('.stat-label').textContent = t.stat_2_label;
+            }
+            if (stats[2]) {
+                stats[2].querySelector('.stat-number').textContent = t.stat_3_number;
+                stats[2].querySelector('.stat-label').textContent = t.stat_3_label;
+            }
+            if (stats[3]) {
+                stats[3].querySelector('.stat-number').textContent = t.stat_4_number;
+                stats[3].querySelector('.stat-label').textContent = t.stat_4_label;
+            }
+        }
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // アクティブ状態更新
+            document.querySelectorAll('.language-selector a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+            
+            // コンテンツ更新
+            updateContent(lang);
+        }
+
         // 初期化
         document.addEventListener('DOMContentLoaded', () => {
             createSakura();
+            
+            // 言語ボタンにイベントリスナー追加
+            document.querySelectorAll('.language-selector a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = e.target.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+            
+            // 初期言語設定（英語）
+            updateContent('en');
         });
     </script>
 </body>
