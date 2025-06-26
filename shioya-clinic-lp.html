@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIOYA LUXURY HEALTH | 最高級消化器内科クリニック</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Sans+JP:wght@100;300;400;500;700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 基本設定 */
+        :root {
+            --navy: #0f1b2e;
+            --deep-navy: #1a2b4d;
+            --champagne-gold: #d4af37;
+            --light-gold: #f4e4c1;
+            --rose-gold: #e8c3a0;
+            --light-gray: #fafafa;
+            --silver: #c0c0c0;
+            --text-gray: #4a4a4a;
+            --white: #ffffff;
+            --black: #000000;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Yu Gothic', sans-serif;
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-weight: 300;
+            background-color: var(--white);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* ゴールドパターンオーバーレイ */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(212, 175, 55, 0.01) 10px,
+                    rgba(212, 175, 55, 0.01) 20px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* タイポグラフィ */
+        h1 {
+            font-family: 'Cinzel', 'Noto Serif JP', serif;
+            font-weight: 600;
+            color: var(--navy);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', 'Noto Serif JP', serif;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 0.08em;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--champagne-gold), transparent);
+        }
+        
+        h3 {
+            font-family: 'Playfair Display', 'Noto Serif JP', serif;
+            font-weight: 400;
+            color: var(--navy);
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* コンテナ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+        
+        /* 桜の花びらアニメーション */
+        .sakura-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .sakura-petal {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 182, 193, 0.7);
+            border-radius: 50% 0 50% 0;
+            animation: sakuraFall 8s linear infinite;
+        }
+        
+        @keyframes sakuraFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* 和柄装飾 */
+        .japanese-pattern {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #d4af37 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, #d4af37 2px, transparent 2px);
+            background-size: 50px 50px;
+            animation: patternMove 20s linear infinite;
+        }
+        
+        @keyframes patternMove {
+            0% {
+                transform: translateX(-100px) translateY(-100px) rotate(0deg);
+            }
+            100% {
+                transform: translateX(100px) translateY(100px) rotate(360deg);
+            }
+        }
+        
+        /* セクション装飾 */
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .section::after {
+            content: '';
+            position: absolute;
+            bottom: 40px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        /* ヘッダー */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--champagne-gold), transparent);
+            opacity: 0.5;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            padding: 5px 0;
+        }
+        
+        .logo::before {
+            content: '♦';
+            color: var(--champagne-gold);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--champagne-gold), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover::after {
+            transform: scaleX(1);
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 15px;
+        }
+
+        .language-selector a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .language-selector a:hover,
+        .language-selector a.active {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        /* ファーストビュー */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        /* ラグジュアリー背景 */
+        .luxury-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.3) 0%, transparent 40%),
+                radial-gradient(ellipse at bottom left, rgba(232, 195, 160, 0.3) 0%, transparent 40%),
+                linear-gradient(135deg, rgba(15, 27, 46, 0.9) 0%, rgba(26, 43, 77, 0.9) 50%, rgba(15, 27, 46, 0.9) 100%),
+                url('images/hero-bg.jpg') center/cover;
+            opacity: 1;
+        }
+        
+        /* ゴールドパーティクル */
+        .gold-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, var(--champagne-gold) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatUp 15s infinite;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            10% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) scale(1.5);
+            }
+        }
+
+        /* 装飾フレーム */
+        .hero-frame {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            pointer-events: none;
+            z-index: 3;
+        }
+        
+        .hero-frame::before,
+        .hero-frame::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--champagne-gold);
+        }
+        
+        .hero-frame::before {
+            top: -25px;
+            left: -25px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .hero-frame::after {
+            bottom: -25px;
+            right: -25px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 0 40px;
+        }
+        
+        /* タイトル装飾 */
+        .hero-title-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-title-wrapper::before,
+        .hero-title-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--champagne-gold));
+        }
+        
+        .hero-title-wrapper::before {
+            right: 100%;
+            margin-right: 30px;
+            background: linear-gradient(to left, transparent, var(--champagne-gold));
+        }
+        
+        .hero-title-wrapper::after {
+            left: 100%;
+            margin-left: 30px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin: 0;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 600;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            animation: fadeInUp 1s ease-out, glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            }
+            to {
+                text-shadow: 0 0 40px rgba(212, 175, 55, 0.8), 0 0 60px rgba(212, 175, 55, 0.4);
+            }
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .hero-subtitle::before {
+            content: '“';
+            position: absolute;
+            top: -10px;
+            left: -30px;
+            font-size: 4rem;
+            color: var(--champagne-gold);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-subtitle::after {
+            content: '”';
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            font-size: 4rem;
+            color: var(--champagne-gold);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .credentials {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .credential-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--champagne-gold) 0%, var(--rose-gold) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .credential-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        /* 共感セクション */
+        .empathy {
+            background: linear-gradient(180deg, #fafafa 0%, #fff 50%, #fafafa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .empathy .sakura-container {
+            opacity: 0.6;
+        }
+        
+        .empathy::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            33% {
+                transform: translateY(-30px) translateX(30px);
+            }
+            66% {
+                transform: translateY(30px) translateX(-30px);
+            }
+        }
+
+        .empathy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .empathy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .empathy-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .empathy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--champagne-gold), var(--rose-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .empathy-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .empathy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .empathy-card h3 {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .empathy-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--champagne-gold);
+        }
+
+        /* 価値提案セクション */
+        .value-prop {
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-prop::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><pattern id="wave" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 20 Q10 10, 20 20 T40 20" stroke="%23d4af37" stroke-width="1" fill="none" opacity="0.3"/></pattern></defs><rect width="200" height="200" fill="url(%23wave)"/></svg>') no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .value-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 40px;
+            background: linear-gradient(135deg, var(--navy) 0%, #3a4d6a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2.5rem;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(15, 27, 46, 0.3);
+        }
+        
+        .value-icon::after {
+            content: '';
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+        }
+
+        /* パッケージセクション */
+        .packages {
+            background: 
+                linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.05) 50%, transparent 100%),
+                var(--light-gray);
+            position: relative;
+        }
+        
+        .packages::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><defs><linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:%23d4af37;stop-opacity:0.1" /><stop offset="50%" style="stop-color:%23d4af37;stop-opacity:0.3" /><stop offset="100%" style="stop-color:%23d4af37;stop-opacity:0.1" /></linearGradient></defs><path d="M0,100 Q300,50 600,100 T1200,100 L1200,200 L0,200 Z" fill="url(%23gold)"/></svg>') no-repeat center;
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .package-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 40%, rgba(212, 175, 55, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .package-card:hover::after {
+            opacity: 1;
+        }
+
+        .package-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .package-card.featured::before {
+            content: "PREMIUM";
+            position: absolute;
+            top: 30px;
+            right: -40px;
+            background: linear-gradient(135deg, var(--champagne-gold) 0%, var(--rose-gold) 100%);
+            color: var(--white);
+            padding: 8px 50px;
+            transform: rotate(45deg);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.5);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            font-family: 'Cinzel', serif;
+        }
+
+        .package-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-navy) 100%);
+            color: var(--white);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 40%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        /* ラグジュアリーフレーム */
+        .luxury-frame {
+            position: relative;
+            padding: 3px;
+            background: linear-gradient(45deg, #d4af37, #f4e4c1, #d4af37);
+            border-radius: 15px;
+            animation: frameGlow 3s ease-in-out infinite alternate;
+        }
+        
+        .luxury-frame::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #d4af37, transparent, #d4af37);
+            border-radius: 15px;
+            z-index: -1;
+            animation: borderMove 4s linear infinite;
+        }
+        
+        @keyframes frameGlow {
+            0% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+            }
+        }
+        
+        @keyframes borderMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .package-header h3 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .package-price {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        .package-content {
+            padding: 40px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .package-features li:before {
+            content: "✦";
+            color: var(--champagne-gold);
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-right: 5px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        /* CTA ボタン */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-navy) 100%);
+            color: var(--white);
+            padding: 20px 60px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 40px rgba(26, 43, 77, 0.4);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(26, 43, 77, 0.4);
+            background: #2a3b5d;
+        }
+
+        .cta-button.gold {
+            background: linear-gradient(135deg, var(--champagne-gold) 0%, var(--rose-gold) 100%);
+            color: var(--white);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+            font-weight: 600;
+        }
+
+        .cta-button.gold:hover {
+            background: #c4a037;
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        /* フロー セクション */
+        .flow {
+            background: var(--white);
+        }
+
+        .flow-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .flow-item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .flow-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .flow-number {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-navy) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 30px rgba(26, 43, 77, 0.3);
+        }
+        
+        .flow-number::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        /* フローライン */
+        .flow-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, transparent, var(--champagne-gold), transparent);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .flow-content {
+            flex: 1;
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        /* アクセス */
+        .access {
+            background: var(--light-gray);
+        }
+
+        .access-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+            align-items: center;
+        }
+
+        .access-info {
+            padding: 40px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .access-map {
+            width: 100%;
+            height: 400px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--white);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e8e8e8;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            padding: 0 30px 30px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* 最終CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, #2c3e5a 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            margin-bottom: 30px;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--white);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--champagne-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover .contact-icon {
+            background: var(--champagne-gold);
+            transform: scale(1.1);
+        }
+
+        /* アニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 追加アニメーションクラス */
+        .fade-in-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* 3Dホバーエフェクト */
+        .hover-3d {
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+            }
+
+            .credentials {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .value-grid,
+            .package-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .package-card.featured {
+                transform: scale(1);
+            }
+
+            .flow-item,
+            .flow-item:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .access-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-methods {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">SHIOYA CLINIC</div>
+                <div class="language-selector">
+                    <a href="#" class="active">日本語</a>
+                    <a href="#">EN</a>
+                    <a href="#">TH</a>
+                    <a href="#">VN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ファーストビュー -->
+    <section class="hero">
+        <div class="luxury-bg"></div>
+        <!-- 画像を使用する場合は以下のようにも記述できます -->
+        <!-- <img src="images/hero-bg.jpg" class="hero-bg-image" alt="Luxury wellness background"> -->
+        <div class="gold-particles" id="particles"></div>
+        <div class="hero-frame"></div>
+        <div class="hero-content">
+            <div class="hero-title-wrapper">
+                <h1>LUXURY WELLNESS</h1>
+            </div>
+            <p class="hero-subtitle">
+                世界最高峰の精密医療と日本の伝統美が結合する<br>
+                完全プライベートなヘルスケア体験
+            </p>
+            <div class="credentials">
+                <div class="credential-item" style="animation: fadeInUp 1s ease-out 0.6s both;">
+                    <div class="credential-icon">✨</div>
+                    <div>
+                        <strong>30,000+</strong><br>
+                        <small>精密健診実績</small>
+                    </div>
+                </div>
+                <div class="credential-item" style="animation: fadeInUp 1s ease-out 0.8s both;">
+                    <div class="credential-icon">👑</div>
+                    <div>
+                        <strong>VIP専用フロア</strong><br>
+                        <small>完全プライベート空間</small>
+                    </div>
+                </div>
+                <div class="credential-item" style="animation: fadeInUp 1s ease-out 1s both;">
+                    <div class="credential-icon">🌐</div>
+                    <div>
+                        <strong>24/7サポート</strong><br>
+                        <small>多言語コンシェルジュ</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 共感と課題提起 -->
+    <section class="section empathy">
+        <div class="container">
+            <div class="empathy-content fade-in">
+                <h2>健康への投資が、最高の資産形成</h2>
+                <p>
+                    世界のエグゼクティブは知っています。<br>
+                    真の豊かさとは、単なる経済的成功ではなく、<br>
+                    健康という土台の上に築かれるものだということを。
+                </p>
+                <div class="empathy-grid">
+                    <div class="empathy-card">
+                        <h3>時間の価値を知るあなたへ</h3>
+                        <p>限られた時間で最大の健康価値を。当院の精密健診は、1日で包括的な健康状態を把握し、将来のリスクを予測します。</p>
+                    </div>
+                    <div class="empathy-card">
+                        <h3>本物の体験を求めるあなたへ</h3>
+                        <p>医療だけでなく、日本の精神文化に触れる特別な時間。盆栽の静寂、禅の瞑想が、心身のバランスを整えます。</p>
+                    </div>
+                    <div class="empathy-card">
+                        <h3>家族の健康を守るあなたへ</h3>
+                        <p>ご家族全員の健康管理をワンストップで。世代を超えた健康戦略を、専門医がオーダーメイドで設計します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 独自の価値提案 -->
+    <section class="section value-prop">
+        <div class="container">
+            <h2 class="fade-in">3つの独自価値</h2>
+            <div class="value-grid">
+                <div class="value-item fade-in">
+                    <div class="value-icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <path d="M30 50 L45 65 L70 35" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="50" cy="25" r="8" fill="currentColor"/>
+                            <rect x="45" y="15" width="10" height="5" fill="currentColor" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>最先端の精密医療</h3>
+                    <p>
+                        <strong>塩屋浩之院長</strong><br>
+                        獨協医科大学医学部卒業<br>
+                        さいたま赤十字病院 消化器内科 元副部長<br>
+                        肝臓専門医・消化器病専門医
+                    </p>
+                    <p>20年以上の臨床経験と最新鋭の検査機器により、微細な病変も見逃さない精密診断を実現。特に消化器系がんの早期発見に定評があります。</p>
+                </div>
+                <div class="value-item fade-in">
+                    <div class="value-icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 桜の花 -->
+                            <g fill="currentColor">
+                                <path d="M50 20 C55 25, 60 20, 60 30 C65 25, 70 30, 60 35 C65 40, 60 45, 50 35 C45 40, 40 35, 50 30 C45 25, 40 30, 50 20 Z"/>
+                                <circle cx="50" cy="30" r="3" fill="#FFD700"/>
+                                <!-- 和柄 -->
+                                <path d="M20 60 Q30 55, 40 60 Q50 65, 60 60 Q70 55, 80 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M20 70 Q30 65, 40 70 Q50 75, 60 70 Q70 65, 80 70" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>日本文化との融合</h3>
+                    <p>
+                        <strong>大宮盆栽村</strong> - 世界的に有名な盆栽の聖地<br>
+                        <strong>武蔵一宮氷川神社</strong> - 2400年の歴史を持つ関東の総鎮守
+                    </p>
+                    <p>健診の前後に、日本の精神文化を体験。盆栽鑑賞や座禅体験が、検査のストレスを和らげ、心身のバランスを整えます。</p>
+                </div>
+                <div class="value-item fade-in">
+                    <div class="value-icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 地球 -->
+                            <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <path d="M20 40 Q35 30, 50 40 Q65 50, 80 40" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M25 60 Q40 50, 55 60 Q70 70, 85 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="50" cy="50" r="2" fill="currentColor"/>
+                            <!-- コミュニケーション線 -->
+                            <path d="M30 30 L70 70 M70 30 L30 70" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3>グローバル・コンシェルジュ</h3>
+                    <p>
+                        埼玉県は日本で2番目に大きなベトナム人コミュニティを有し、多文化共生の先進地域です。
+                    </p>
+                    <p>医療知識と文化理解を兼ね備えたバイリンガルスタッフが、言葉の壁を超えた心の通うサポートを提供します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 健診パッケージ -->
+    <section class="section packages">
+        <div class="container">
+            <h2 class="fade-in">健診パッケージ</h2>
+            <div class="package-grid">
+                <div class="package-card fade-in">
+                    <div class="package-header">
+                        <h3>プレミアムドック</h3>
+                        <div class="package-price">¥77,000</div>
+                        <small>所要時間：3-4時間</small>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li>上部消化管内視鏡検査（胃カメラ）</li>
+                            <li>腹部超音波検査</li>
+                            <li>血液検査（腫瘍マーカー含む）</li>
+                            <li>胸部X線検査</li>
+                            <li>心電図検査</li>
+                            <li>医師による結果説明</li>
+                            <li>通訳サポート</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">詳細を問い合わせる</a>
+                    </div>
+                </div>
+
+                <div class="package-card featured fade-in">
+                    <div class="package-header">
+                        <h3>エグゼクティブドック</h3>
+                        <!-- ラグジュアリーアイコン -->
+                        <svg class="luxury-icon" width="30" height="30" viewBox="0 0 60 60" fill="none">
+                            <path d="M30 5 L35 20 L50 20 L38 30 L43 45 L30 37 L17 45 L22 30 L10 20 L25 20 Z" fill="#d4af37" stroke="#f4e4c1" stroke-width="1"/>
+                            <circle cx="30" cy="30" r="3" fill="#f4e4c1"/>
+                        </svg>
+                        <div class="package-price">¥149,600</div>
+                        <small>所要時間：5-6時間</small>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li>プレミアムドックの全項目</li>
+                            <li>下部消化管内視鏡検査（大腸カメラ）</li>
+                            <li>CT検査（胸部・腹部）</li>
+                            <li>動脈硬化検査</li>
+                            <li>骨密度測定</li>
+                            <li>VIP個室での検査</li>
+                            <li>専属コンシェルジュ</li>
+                            <li>昼食（特別食対応可）</li>
+                        </ul>
+                        <a href="#contact" class="cta-button gold">優先予約する</a>
+                    </div>
+                </div>
+
+                <div class="package-card fade-in">
+                    <div class="package-header">
+                        <h3>オーダーメイド・ウェルネスジャーニー</h3>
+                        <div class="package-price">お見積り</div>
+                        <small>完全カスタマイズ</small>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li>ご要望に応じた検査項目の設計</li>
+                            <li>複数日にわたる包括的健診</li>
+                            <li>文化体験プログラムの組み込み</li>
+                            <li>高級ホテルでの宿泊手配</li>
+                            <li>プライベートジェット対応</li>
+                            <li>家族全員の健診コーディネート</li>
+                            <li>1年間のフォローアップ</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">カスタマイズ相談</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービスの流れ -->
+    <section class="section flow">
+        <div class="container">
+            <h2 class="fade-in">ご利用の流れ</h2>
+            <div class="flow-timeline">
+                <div class="flow-item fade-in">
+                    <div class="flow-number">1</div>
+                    <div class="flow-content">
+                        <h3>お問い合わせ</h3>
+                        <p>WhatsApp、Zalo、メールでお気軽にご連絡ください。日本語・英語・ベトナム語・タイ語で対応いたします。</p>
+                    </div>
+                </div>
+                <div class="flow-item fade-in">
+                    <div class="flow-number">2</div>
+                    <div class="flow-content">
+                        <h3>プラン提案</h3>
+                        <p>お客様のご要望と健康状態をヒアリング。最適な健診プランと文化体験をご提案します。</p>
+                    </div>
+                </div>
+                <div class="flow-item fade-in">
+                    <div class="flow-number">3</div>
+                    <div class="flow-content">
+                        <h3>来日準備</h3>
+                        <p>身元保証機関との連携によるビザサポート。事前問診票の送付と準備指導を行います。</p>
+                    </div>
+                </div>
+                <div class="flow-item fade-in">
+                    <div class="flow-number">4</div>
+                    <div class="flow-content">
+                        <h3>健診実施</h3>
+                        <p>専属コンシェルジュがお出迎え。リラックスした環境で精密検査を受けていただきます。</p>
+                    </div>
+                </div>
+                <div class="flow-item fade-in">
+                    <div class="flow-number">5</div>
+                    <div class="flow-content">
+                        <h3>アフターケア</h3>
+                        <p>母国語での詳細な結果報告書。必要に応じて、継続的な健康管理をサポートします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 統計情報セクション -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-icon">
+                        <svg width="40" height="40" viewBox="0 0 60 60" fill="currentColor">
+                            <rect x="10" y="40" width="8" height="20" fill="#d4af37"/>
+                            <rect x="21" y="30" width="8" height="30" fill="#d4af37"/>
+                            <rect x="32" y="20" width="8" height="40" fill="#d4af37"/>
+                            <rect x="43" y="10" width="8" height="50" fill="#d4af37"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-count="30000">0+</div>
+                    <div class="stat-label">精密健診実績</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-icon">
+                        <svg width="40" height="40" viewBox="0 0 60 60" fill="currentColor">
+                            <path d="M30 5 L35 20 L50 20 L38 30 L43 45 L30 37 L17 45 L22 30 L10 20 L25 20 Z" fill="#d4af37"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-count="98">0%</div>
+                    <div class="stat-label">顾客満足度</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-icon">
+                        <svg width="40" height="40" viewBox="0 0 60 60" fill="currentColor">
+                            <circle cx="30" cy="30" r="25" stroke="#d4af37" stroke-width="3" fill="none"/>
+                            <path d="M20 30 L28 38 L40 22" stroke="#d4af37" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-count="95">0%</div>
+                    <div class="stat-label">早期発見率</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-icon">
+                        <svg width="40" height="40" viewBox="0 0 60 60" fill="currentColor">
+                            <circle cx="30" cy="30" r="20" stroke="#d4af37" stroke-width="3" fill="none"/>
+                            <path d="M15 30 Q30 15, 45 30 Q30 45, 15 30" fill="#d4af37" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">国と地域からの来院</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- アクセス -->
+    <section class="section access">
+        <div class="container">
+            <h2 class="fade-in">アクセス</h2>
+            <div class="access-grid">
+                <div class="access-info fade-in">
+                    <h3>しおや消化器内科クリニック</h3>
+                    <p>
+                        〒338-0001<br>
+                        埼玉県さいたま市中央区本町東3-4-7<br>
+                        JR埼京線 与野本町駅 徒歩3分
+                    </p>
+                    <p>
+                        <strong>東京駅から約35分</strong><br>
+                        新宿駅から約25分<br>
+                        成田空港から約90分<br>
+                        羽田空港から約60分
+                    </p>
+                    <p>
+                        診療時間：月〜土 9:00-18:00<br>
+                        VIP健診は時間外対応も可能です
+                    </p>
+                </div>
+                <div class="access-map fade-in">
+                    <!-- Google Maps埋め込み -->
+                    <iframe src="https://maps.google.com/maps?q=埼玉県さいたま市中央区本町東3-4-7&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+        <div class="container">
+            <h2 class="fade-in">よくあるご質問</h2>
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. VIP対応は可能ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、完全個室での検査、時間外対応、専属医師・看護師の配置など、お客様のプライバシーと快適性を最優先したVIP対応が可能です。事前にご要望をお聞かせください。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 宗教的な配慮や食事制限への対応は？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ハラル、ベジタリアン、ビーガン、アレルギー対応など、あらゆる食事制限に対応いたします。また、お祈りの時間や宗教的な配慮が必要な場合も、事前にお知らせいただければ適切に対応させていただきます。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 医療ビザは必要ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>健診のみの場合は短期滞在ビザで可能ですが、治療が必要な場合は医療ビザが必要になることがあります。当院提携の身元保証機関がビザ取得をサポートいたします。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 検査結果はいつ受け取れますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>基本的な検査結果は当日お渡しします。詳細な病理検査結果は1-2週間後に、母国語に翻訳された報告書としてお送りします。オンラインでの結果説明も可能です。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 支払い方法は？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>現金、クレジットカード（VISA、MasterCard、AMEX）、銀行振込、暗号通貨でのお支払いが可能です。海外保険の適用についてもご相談ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>あなたの健康投資を、今すぐ始めましょう</h2>
+            <p>専門スタッフが、あなたに最適なウェルネスジャーニーをご提案します</p>
+            <div class="contact-methods">
+                <a href="https://wa.me/81xxxxxxxxx" class="contact-method">
+                    <div class="contact-icon">📱</div>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://zalo.me/xxxxxxxxx" class="contact-method">
+                    <div class="contact-icon">💬</div>
+                    <span>Zalo</span>
+                </a>
+                <a href="mailto:info@shioya-clinic.jp" class="contact-method">
+                    <div class="contact-icon">✉️</div>
+                    <span>メール</span>
+                </a>
+                <a href="#" class="contact-method" onclick="showForm()">
+                    <div class="contact-icon">📝</div>
+                    <span>お問い合わせフォーム</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // ゴールドパーティクル生成
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = Math.random() * 4 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        createParticles();
+        
+        // パララックス効果
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            parallaxElements.forEach(element => {
+                const speed = element.getAttribute('data-speed') || 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+            
+            // セクション装飾の回転
+            document.querySelectorAll('.section::before, .section::after').forEach(element => {
+                element.style.transform = `rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+        
+        // スクロールアニメーション
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ トグル
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ヘッダーのスクロール効果
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            
+            if (currentScroll > 100) {
+                header.style.padding = '10px 0';
+                header.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.98))';
+            } else {
+                header.style.padding = '20px 0';
+                header.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95))';
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // マウスホバーエフェクト
+        document.querySelectorAll('.package-card, .empathy-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const deltaX = (x - centerX) / centerX;
+                const deltaY = (y - centerY) / centerY;
+                
+                card.style.transform = `perspective(1000px) rotateY(${deltaX * 5}deg) rotateX(${-deltaY * 5}deg) translateZ(10px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateZ(0px)';
+            });
+        });
+
+        // フォーム表示（実装は別途）
+        function showForm() {
+            alert('お問い合わせフォームは準備中です。WhatsApp、Zalo、またはメールでお問い合わせください。');
+        }
+        
+        // 桜の花びら生成
+        function createSakura() {
+            const sakuraContainers = document.querySelectorAll('.sakura-container');
+            
+            sakuraContainers.forEach(container => {
+                for (let i = 0; i < 15; i++) {
+                    const petal = document.createElement('div');
+                    petal.className = 'sakura-petal';
+                    petal.style.left = Math.random() * 100 + '%';
+                    petal.style.animationDelay = Math.random() * 8 + 's';
+                    petal.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                    container.appendChild(petal);
+                }
+            });
+        }
+        
+        // カウンターアニメーション
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const suffix = element.textContent.includes('%') ? '%' : element.textContent.includes('+') ? '+' : '';
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString() + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.ceil(current).toLocaleString() + suffix;
+                }
+            }, 20);
+        }
+        
+        // 数字のカウンターアニメーション
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const value = parseInt(target.getAttribute('data-count'));
+                    animateCounter(target, value);
+                    counterObserver.unobserve(target);
+                }
+            });
+        });
+        
+        document.querySelectorAll('[data-count]').forEach(el => {
+            counterObserver.observe(el);
+        });
+        
+        // 初期化
+        document.addEventListener('DOMContentLoaded', () => {
+            createSakura();
+        });
+    </script>
+</body>
+</html>
