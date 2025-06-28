@@ -288,7 +288,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: #000;
+            background: linear-gradient(135deg, #0f1b2e 0%, #1a2b4d 50%, #2c3e5a 100%);
         }
         
         /* ラグジュアリー背景 */
@@ -379,8 +379,20 @@
             z-index: 4;
             text-align: center;
             color: var(--white);
-            max-width: 900px;
-            padding: 0 40px;
+            max-width: 1000px;
+            padding: 0 20px;
+            animation: heroFadeIn 2s ease-out;
+        }
+        
+        @keyframes heroFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         /* タイトル装飾 */
@@ -413,11 +425,13 @@
 
         .hero h1 {
             color: var(--white);
-            margin: 0;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin: 0 0 2rem 0;
+            font-size: clamp(2.2rem, 5.5vw, 4rem);
             font-weight: 600;
-            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-            animation: fadeInUp 1s ease-out, glow 3s ease-in-out infinite alternate;
+            line-height: 1.3;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 60px rgba(212, 175, 55, 0.4);
+            animation: fadeInUp 1s ease-out, glow 4s ease-in-out infinite alternate;
+            letter-spacing: 0.05em;
         }
         
         @keyframes glow {
@@ -431,15 +445,18 @@
 
         .hero-subtitle {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-size: clamp(1.1rem, 2.2vw, 1.6rem);
             margin-bottom: 3rem;
             opacity: 0.95;
             font-weight: 300;
-            letter-spacing: 0.15em;
-            line-height: 1.8;
-            animation: fadeInUp 1s ease-out 0.3s both;
+            letter-spacing: 0.08em;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease-out 0.5s both;
             position: relative;
             padding: 20px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero-subtitle::before {
@@ -465,32 +482,58 @@
         }
 
         .credentials {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.8s both;
         }
 
         .credential-item {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.4s ease;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .credential-item:nth-child(2) {
+            animation-delay: -2s;
+        }
+        
+        .credential-item:nth-child(3) {
+            animation-delay: -4s;
+        }
+        
+        .credential-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
         }
 
         .credential-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, var(--champagne-gold) 0%, var(--rose-gold) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            font-size: 1.8rem;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
             position: relative;
             overflow: hidden;
+            margin-bottom: 10px;
         }
         
         .credential-icon::before {
@@ -701,19 +744,29 @@
 
         .package-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
             margin-top: 60px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .package-card {
             background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-            transition: all 0.4s ease;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.12);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border: 2px solid rgba(212, 175, 55, 0.15);
+            transform: translateY(0);
+        }
+        
+        .package-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 35px 100px rgba(0,0,0,0.18);
+            border-color: rgba(212, 175, 55, 0.4);
         }
         
         .package-card::after {
@@ -757,10 +810,14 @@
         .package-header {
             background: linear-gradient(135deg, var(--navy) 0%, var(--deep-navy) 100%);
             color: var(--white);
-            padding: 40px 30px;
+            padding: 50px 30px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .package-header::before {
@@ -1075,11 +1132,13 @@
         }
 
         .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             margin-top: 50px;
-            flex-wrap: wrap;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .contact-method {
@@ -1270,49 +1329,116 @@
 
         /* 盆栽オプションセクション */
         .bonsai-option {
-            background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+            background: 
+                radial-gradient(ellipse at top, rgba(139, 148, 129, 0.1) 0%, transparent 70%),
+                linear-gradient(135deg, #f0f4f1 0%, #e6f2e6 50%, #ddeedd 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bonsai-option::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g opacity="0.05"><circle cx="20" cy="30" r="2" fill="%23228B22"/><circle cx="80" cy="20" r="1.5" fill="%23228B22"/><circle cx="60" cy="70" r="2.5" fill="%23228B22"/><circle cx="40" cy="50" r="1" fill="%23228B22"/></g></svg>') repeat;
+            animation: float 20s ease-in-out infinite;
         }
         
         .bonsai-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .bonsai-option h2 {
+            color: #2d5016;
+            position: relative;
+        }
+        
+        .bonsai-option h2::after {
+            background: linear-gradient(to right, transparent, #228B22, transparent);
+        }
+        
+        .bonsai-option h3 {
+            color: #2d5016;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
         }
         
         .bonsai-features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
         }
         
         .feature-item {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--champagne-gold);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(34, 139, 34, 0.15);
+            border: 2px solid rgba(34, 139, 34, 0.2);
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #228B22, #32CD32, #228B22);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(34, 139, 34, 0.25);
+            border-color: rgba(34, 139, 34, 0.4);
         }
         
         .feature-item h4 {
-            color: var(--navy);
+            color: #2d5016;
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
         
         .bonsai-pricing {
-            background: var(--navy);
+            background: linear-gradient(135deg, #2d5016 0%, #1a2f0b 100%);
             color: var(--white);
-            padding: 30px;
-            border-radius: 15px;
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
+            box-shadow: 0 20px 50px rgba(45, 80, 22, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bonsai-pricing::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(34, 139, 34, 0.1) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
         }
         
         .bonsai-pricing .price {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: bold;
-            color: var(--champagne-gold);
-            margin-bottom: 10px;
+            color: #90EE90;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(144, 238, 144, 0.5);
         }
         
         .bonsai-pricing .includes {
@@ -1323,47 +1449,84 @@
         /* レスポンシブ */
         @media (max-width: 768px) {
             .header-content {
-                padding: 10px 0;
-                min-height: 50px;
+                padding: 15px 0;
+                min-height: 60px;
             }
             
             .logo {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 letter-spacing: 0.1em;
             }
             
-            .logo::before {
-                margin-right: 6px;
-                font-size: 0.9rem;
-            }
-            
             .section {
-                padding: 60px 0;
+                padding: 80px 0;
+            }
+
+            .hero {
+                min-height: 600px;
+                padding: 0 15px;
             }
 
             .hero-content {
-                padding: 0 20px;
+                padding: 0 15px;
+                max-width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
+                line-height: 1.2;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: clamp(1rem, 4vw, 1.3rem);
+                margin-bottom: 2rem;
+                padding: 15px 0;
             }
 
             .credentials {
-                flex-direction: column;
-                gap: 20px;
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 2rem;
+            }
+            
+            .credential-item {
+                padding: 20px 15px;
             }
 
-            .value-grid,
+            .value-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
             .package-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 25px;
+                padding: 0 10px;
+            }
+            
+            .package-header {
+                padding: 40px 25px;
+                min-height: 180px;
             }
 
             .package-card.featured {
                 transform: scale(1);
+            }
+            
+            .package-card:hover {
+                transform: translateY(-8px) scale(1.01);
             }
 
             .flow-item,
             .flow-item:nth-child(even) {
                 flex-direction: column;
                 text-align: center;
+                gap: 20px;
+            }
+            
+            .flow-timeline::before {
+                display: none;
             }
 
             .access-grid {
@@ -1372,20 +1535,38 @@
             }
 
             .contact-methods {
-                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
             }
             
             .stats-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
             }
             
             .stat-item {
-                padding: 20px 15px;
+                padding: 25px 15px;
             }
             
-            .stat-number {
-                font-size: 2rem;
+            .bonsai-features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-item {
+                padding: 25px 20px;
+            }
+            
+            .faq-item {
+                margin-bottom: 15px;
+            }
+            
+            .faq-question {
+                padding: 20px;
+            }
+            
+            .faq-answer {
+                padding: 0 20px 20px;
             }
         }
     </style>
@@ -1931,8 +2112,8 @@
         
         // スクロールアニメーション
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -1940,10 +2121,31 @@
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         entry.target.classList.add('visible');
-                    }, index * 100);
+                        // 特別なアニメーション効果
+                        if (entry.target.classList.contains('package-card')) {
+                            entry.target.style.animationDelay = `${index * 200}ms`;
+                            entry.target.style.animation = 'slideInUp 0.8s ease-out forwards';
+                        }
+                    }, index * 150);
                 }
             });
         }, observerOptions);
+
+        // 新しいアニメーション
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px) scale(0.9);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+        `;
+        document.head.appendChild(style);
 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
