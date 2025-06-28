@@ -1494,11 +1494,12 @@
 
             .hero {
                 height: 100vh;
-                min-height: 600px;
-                padding: 80px 0 0 0;
+                min-height: 650px;
+                padding: 100px 0 40px 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
             }
 
             .hero-content {
@@ -1506,6 +1507,11 @@
                 max-width: 100%;
                 width: 100%;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
             }
             
             .hero h1 {
@@ -1624,23 +1630,37 @@
         /* 極小画面対応 */
         @media (max-width: 480px) {
             .hero {
-                min-height: 500px;
-                padding: 60px 0 0 0;
+                height: 100vh;
+                min-height: 600px;
+                padding: 80px 0 40px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .hero-content {
                 padding: 0 15px;
+                width: 100%;
+                max-width: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: auto;
             }
             
             .hero h1 {
-                font-size: clamp(1.7rem, 8vw, 2.2rem);
+                font-size: clamp(1.8rem, 7vw, 2.5rem);
                 margin-bottom: 1.5rem;
+                line-height: 1.2;
             }
             
             .hero-subtitle {
-                font-size: clamp(0.95rem, 5vw, 1.2rem);
-                margin-bottom: 2rem;
+                font-size: clamp(1rem, 4vw, 1.3rem);
+                margin-bottom: 2.5rem;
                 padding: 15px 0;
+                line-height: 1.6;
             }
             
             .credentials {
@@ -1816,20 +1836,20 @@
                 <div class="package-card fade-in">
                     <div class="package-header">
                         <h3>家族感謝プラン</h3>
-                        <p class="price">親御様：100,000円/1名</p>
-                        <p class="price-sub">お子様（30歳未満）：50,000円/1名</p>
+                        <p class="price">親御様（30歳以上）：100,000円/1名</p>
+                        <p class="price-sub">お子様（30歳以下）：50,000円/1名</p>
                         <p class="ref-price">(参考価格: 親御様 ~26,000 THB / お子様 ~13,000 THB)</p>
                     </div>
                     <div class="package-content">
                         <ul class="package-features">
-                            <li>上部消化管内視鏡検査（胃カメラ）</li>
-                            <li>大腸内視鏡検査（親御様のみ）</li>
+                            <li><strong>親御様：</strong>上部消化管内視鏡検査（胃カメラ）+ 大腸内視鏡検査</li>
+                            <li><strong>お子様：</strong>上部消化管内視鏡検査（胃カメラ）のみ</li>
                             <li>腹部超音波検査</li>
-                            <li>血液検査（腫瘍マーカー含む）</li>
-                            <li>胸部X線検査</li>
-                            <li>心電図検査</li>
-                            <li>医師による結果説明</li>
-                            <li>通訳サポート</li>
+                            <li>血液検査（脂質・肝機能・腎機能・血糖・炎症マーカー）</li>
+                            <li>胸部X線検査・心電図検査</li>
+                            <li>身体測定・血圧測定・視力聴力検査</li>
+                            <li>尿検査・便潜血検査</li>
+                            <li>医師による結果説明・通訳サポート</li>
                         </ul>
                         <a href="#contact" class="cta-button">詳細を問い合わせる</a>
                     </div>
@@ -1843,20 +1863,20 @@
                             <path d="M30 5 L35 20 L50 20 L38 30 L43 45 L30 37 L17 45 L22 30 L10 20 L25 20 Z" fill="#d4af37" stroke="#f4e4c1" stroke-width="1"/>
                             <circle cx="30" cy="30" r="3" fill="#f4e4c1"/>
                         </svg>
-                        <div class="package-price">520,000円</div>
-                        <p class="ref-price">(参考価格: ~137,000 THB)</p>
+                        <div class="package-price">200,000円</div>
+                        <p class="ref-price">(参考価格: ~52,000 THB)</p>
                         <small>所要時間: 5-6時間</small>
                     </div>
                     <div class="package-content">
                         <ul class="package-features">
-                            <li>プレミアムドックの全項目</li>
+                            <li>上部消化管内視鏡検査（胃カメラ）</li>
                             <li>下部消化管内視鏡検査（大腸カメラ）</li>
-                            <li>CT検査（胸部・腹部）</li>
-                            <li>動脈硬化検査</li>
-                            <li>骨密度測定</li>
-                            <li>VIP個室での検査</li>
-                            <li>専任コンシェルジュ</li>
-                            <li>ランチ（特別食対応可）</li>
+                            <li>腹部超音波検査・胸部X線検査</li>
+                            <li>心電図・呼吸機能検査</li>
+                            <li>血液検査（脂質・肝機能・腎機能・血糖・炎症マーカー・腫瘍マーカー）</li>
+                            <li>尿検査・便潜血検査・身体測定</li>
+                            <li>VIP個室での検査・専任コンシェルジュ</li>
+                            <li>ランチ（特別食対応可）・通訳サポート</li>
                         </ul>
                         <a href="#contact" class="cta-button gold">優先予約</a>
                     </div>
