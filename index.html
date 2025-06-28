@@ -1268,6 +1268,58 @@
             line-height: 1.4;
         }
 
+        /* 盆栽オプションセクション */
+        .bonsai-option {
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+        }
+        
+        .bonsai-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .bonsai-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--champagne-gold);
+        }
+        
+        .feature-item h4 {
+            color: var(--navy);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .bonsai-pricing {
+            background: var(--navy);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .bonsai-pricing .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--champagne-gold);
+            margin-bottom: 10px;
+        }
+        
+        .bonsai-pricing .includes {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
         /* レスポンシブ */
         @media (max-width: 768px) {
             .header-content {
@@ -1357,7 +1409,7 @@
         <div class="hero-frame"></div>
         <div class="hero-content">
             <div class="hero-title-wrapper">
-                <h1>ゴールデンウィークの日本旅行で<br>特別な「安心」を家族にプレゼントしませんか？</h1>
+                <h1>日本旅行で大切な家族に<br>一生の「安心」をプレゼントしませんか？</h1>
             </div>
             <p class="hero-subtitle">
                 今こそ、円安で日本の最高級医療がより身近に。<br>
@@ -1433,12 +1485,12 @@
                     </div>
                     <h3>最先端の精密医療</h3>
                     <p>
-                        <strong>院長 塩谷 宏之 医師</strong><br>
-                        獨協医科大学卒業<br>
-                        元さいたま赤十字病院 消化器科副部長<br>
-                        肝臓専門医・消化器専門医
+                        <strong>日本消化器内視鏡学会認定専門医</strong><br>
+                        日本ヘリコバクター学会認定医<br>
+                        日本肝臓学会認定肥臓専門医<br>
+                        大学病院副部長経験 20,000件以上の内視鏡検査実績
                     </p>
-                    <p>最新锐の医療機器と経験豊富な専門医が、世界最高水準の精密診断を提供。他では見つからない疾患の早期発見が可能です。</p>
+                    <p>日本最高水準の内視鏡技術で、1mm以下の微小な早期ガンも発見。消化器内視鏡学会認定の最高レベルの技術で、家族の将来を守ります。</p>
                 </div>
                 <div class="value-item fade-in">
                     <div class="value-icon">
@@ -1472,13 +1524,13 @@
                             <path d="M30 30 L70 70 M70 30 L30 70" stroke="currentColor" stroke-width="1" opacity="0.5"/>
                         </svg>
                     </div>
-                    <h3>ไม่จำเป็นต้องเสียเงินมาก</h3>
+                    <h3>特別価格で提供</h3>
                     <p>
-                        <strong>ราคาพิเศษสำหรับครอบครัว</strong><br>
-                        ในช่วงเงินเยนอ่อนค่า การตรวจสุขภาพครบวงจรสำหรับ 2 ท่าน<br>
-                        ต้นทุนเท่ากับทานอาหารมื้อหรูเพียงมื้อเดียว
+                        <strong>円安活用プラン</strong><br>
+                        今こその特別価格で、世界最高水準の内視鏡検査を<br>
+                        家族2人分でも、高級レストラン1回分の価格で
                     </p>
-                    <p>เรามีล่ามภาษาไทยคอยดูแลตลอดการตรวจ</p>
+                    <p>日本語、英語、中国語対応のスタッフが、網羅的にサポート。ビザや宿泊手配もお任せください。</p>
                 </div>
             </div>
         </div>
@@ -1546,13 +1598,46 @@
                         <ul class="package-features">
                             <li>カスタマイズされた検査メニュー設計</li>
                             <li>複数日にわたる総合健康診断</li>
-                            <li>統合文化体験プログラム</li>
+                            <li><strong>大宮盆栽村プライベートツアー</strong></li>
+                            <li>氷川神社参拝・日本文化体験</li>
                             <li>高級ホテル宿泊手配</li>
-                            <li>プライベートジェットコーディネート</li>
-                            <li>家族健康管理コーディネート</li>
+                            <li>専用車・通訳サービス</li>
                             <li>1年間のフォローアップケア</li>
                         </ul>
                         <a href="#contact" class="cta-button">相談する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 大宮盆栽村オプション -->
+    <section class="section bonsai-option">
+        <div class="container">
+            <h2 class="fade-in">特別オプション：大宮盆栽村プライベートツアー</h2>
+            <div class="bonsai-content">
+                <div class="bonsai-info">
+                    <h3>世界に誇る盆栽の聖地を、プライベートガイドとともに</h3>
+                    <p>検査の翌日は、世界的に有名な大宮盆栽村でゆったりとした時間をお過ごしください。数百年の歴史を持つ名品盆栽から、初心者向けの盆栽体験まで、日本文化の粋を堪能いただけます。</p>
+                    
+                    <div class="bonsai-features">
+                        <div class="feature-item">
+                            <h4>🌲 プライベート盆栽園見学</h4>
+                            <p>一般公開されていない名品盆栽もご覧いただけます</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🎋 盆栽制作体験</h4>
+                            <p>職人の指導のもと、お持ち帰り用の盆栽を制作</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🍵 伝統茶室での茶道体験</h4>
+                            <p>日本の「わび・さび」の精神を体感</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bonsai-pricing">
+                        <p class="price">追加料金：50,000円/1名様</p>
+                        <p class="includes">（専用車、通訳ガイド、昼食、盆栽体験料込み）</p>
                     </div>
                 </div>
             </div>
@@ -1730,7 +1815,52 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>現金、クレジットカード（VISA、MasterCard、AMEX）、銀行振込、暗号通貨でのお支払いを受け付けています。国際保険の適用についてはご相談ください。</p>
+                        <p>現金、クレジットカード（VISA、MasterCard、AMEX）、銀行振込でのお支払いを受け付けています。円建て・ドル建て両方対応可能です。国際保険の適用についてもご相談ください。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 内視鏡検査は本当に痛くないのですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、鎮静剤を使用するため、ほとんどの方が「眠っている間に終わった」とおっしゃいます。検査中の記憶もほとんどなく、目覚めた時には検査が完了しています。安全性にも十分配慮しており、専門の麻酔科医がモニタリングを行います。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 検査前の食事制限はありますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>胃カメラの場合は検査前日の21時以降は絶食、当日朝は水分のみ摂取可能です。大腸カメラの場合は、検査2日前から専用の食事と下剤の服用が必要です。詳細な説明書を事前にお渡しいたします。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 検査当日の所要時間はどのくらいですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>到着から帰宅まで約3-4時間を予定しています。検査自体は胃カメラが約15分、大腸カメラが約30分ですが、事前準備、鎮静剤の効果待ち、回復時間を含めての時間です。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 家族の付き添いは可能ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、ご家族の付き添いを歓迎いたします。快適な待合室をご用意しており、検査の進行状況もお知らせします。検査結果の説明時にも同席いただけます。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Q. 盆栽村ツアーはいつ実施されますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>検査翌日以降、お客様のご希望に合わせて実施いたします。検査当日は安静にしていただき、翌日以降にゆったりと日本文化をお楽しみください。所要時間は約4-5時間です。</p>
                     </div>
                 </div>
             </div>
